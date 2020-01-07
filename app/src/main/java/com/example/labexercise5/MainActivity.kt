@@ -22,8 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         countVM = ViewModelProviders.of(this).get(CountViewModel::class.java)
         sharePre = getPreferences(Context.MODE_PRIVATE)
-
-
+        
         imageViewLike.setOnClickListener {
             countVM.plusLike()
             textViewLike.text = countVM.countLike.toString()
